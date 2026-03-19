@@ -1,0 +1,265 @@
+.pageWrapper {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.signinCard {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 3.5rem 2.5rem;
+  border-radius: 32px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.title span {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.forgotLink {
+  font-size: 0.8rem;
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.inputGroup input {
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.05);
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  background: #111827;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.submitBtn:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #e5e7eb;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.googleBtn {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 0.8rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.googleBtn:hover {
+  background: #f9fafb;
+}
+
+.googleBtn img {
+  width: 18px;
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.modalWrapper {
+  display: block;
+  padding: 0;
+  background: transparent;
+  min-height: auto;
+}
+
+.modalWrapper .signinCard {
+  box-shadow: none;
+  border: none;
+  padding: 0.5rem 0;
+  max-width: 100%;
+}
+
+.successMsg {
+  background: #e6fffa;
+  color: #065f46;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #34d399;
+}
+
+.errorMsg {
+  background: #ffe6e6;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #f87171;
+}
+
+@media (max-width: 1024px) {
+  .signinCard {
+    max-width: 380px;
+    padding: 3rem 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 1.5rem;
+  }
+
+  .signinCard {
+    max-width: 100%;
+    padding: 2.5rem 1.8rem;
+    border-radius: 26px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 1rem;
+  }
+
+  .signinCard {
+    padding: 2rem 1.5rem;
+    border-radius: 22px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .inputGroup input {
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .submitBtn {
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .googleBtn {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,168 @@
+.stepsSection {
+  padding: 2rem 2rem;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  position: relative;
+}
+
+.stepCard {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 24px;
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover {
+  background: #ffffff;
+  border-color: #6366f1;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.stepNumber {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.stepDescription {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.connector {
+  position: absolute;
+  top: 50%;
+  right: -1.5rem;
+  width: 1rem;
+  height: 2px;
+  background: #e5e7eb;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .connector {
+    display: none;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stepsSection {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .stepCard {
+    padding: 2rem;
+  }
+
+  .stepTitle {
+    font-size: 1.1rem;
+  }
+
+  .stepDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stepsSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .stepCard {
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+  }
+
+  .stepNumber {
+    font-size: 0.85rem;
+  }
+
+  .stepTitle {
+    font-size: 1rem;
+  }
+
+  .stepDescription {
+    font-size: 0.85rem;
+  }
+}

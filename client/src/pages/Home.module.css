@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+.sectionInner {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sectionSpacing {
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .sectionInner {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.2rem;
+  }
+
+  .sectionSpacing {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .sectionSpacing {
+    margin-top: 1rem;
+  }
+}

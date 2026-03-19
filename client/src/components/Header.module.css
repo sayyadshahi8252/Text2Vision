@@ -1,0 +1,220 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.scrolled {
+  padding: 0.8rem 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.brandText {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #1e1e1e 30%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.creditPill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.iconSmall {
+  width: 16px;
+  height: 16px;
+}
+
+.creditText {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.userName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.profileIcon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.logoutWrapper {
+  padding: 6px;
+  background: #f9fafb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logoutWrapper:hover {
+  background: #fee2e2;
+}
+
+.logoutIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.authGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.active {
+  color: #6366f1;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .userSection {
+    gap: 1rem;
+  }
+
+  .authGroup {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .creditPill {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .creditText {
+    font-size: 0.8rem;
+  }
+
+  .brandText {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .userName {
+    display: none;
+  }
+
+  .nav {
+    gap: 0.7rem;
+  }
+
+  .authGroup {
+    gap: 0.7rem;
+  }
+
+  .creditPill {
+    padding: 0.35rem 0.7rem;
+  }
+
+  .profileIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .logoutIcon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandText {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  .nav {
+    gap: 0.5rem;
+  }
+
+  .creditPill {
+    display: none;
+  }
+}

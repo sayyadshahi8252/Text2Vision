@@ -1,0 +1,184 @@
+.footer {
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 60px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px 30px 20px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.brandSide {
+  max-width: 320px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 30px;
+}
+
+.linkGroup h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.linkGroup a {
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: #64748b;
+  margin-bottom: 8px;
+  transition: all 0.25s ease;
+}
+
+.linkGroup a:hover {
+  color: #2563eb;
+  transform: translateX(3px);
+}
+
+.bottomSection {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.copyright span {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.socials {
+  display: flex;
+  gap: 18px;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #64748b;
+  transition: color 0.25s ease;
+}
+
+.socials a:hover {
+  color: #2563eb;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding: 50px 20px 25px;
+  }
+
+  .linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brandSide {
+    max-width: 100%;
+  }
+
+  .linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .linkGroup {
+    text-align: left;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/* Small Mobile Fix */
+@media (max-width: 480px) {
+  .container {
+    padding: 35px 15px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .tagline {
+    font-size: 12.5px;
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .linkGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .linkGroup {
+    text-align: center;
+  }
+
+  .linkGroup h4 {
+    margin-bottom: 8px;
+  }
+
+  .linkGroup a {
+    margin-bottom: 6px;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .bottomSection {
+    gap: 8px;
+  }
+}
