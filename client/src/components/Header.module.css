@@ -140,7 +140,7 @@
   color: #6366f1;
 }
 .logoLink {
-  text-decoration: none;   /* ❌ removes underline */
+  text-decoration: none;   
   display: inline-block;
 }
 @media (max-width: 1024px) {
@@ -210,9 +210,11 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 0.4rem;
+    padding: 0 0.8rem;
   }
-
+  .userSection {
+    gap: 0.6rem;
+  }
   .brandText {
     font-size: 1.2rem;
   }
@@ -243,4 +245,6 @@
     width: 14px;
     height: 14px;
   }
+
+
 }
