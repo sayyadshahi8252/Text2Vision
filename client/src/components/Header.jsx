@@ -12,8 +12,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { logoutUser } from "../redux/dataSlice/dataSlice";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [ isScrolled, setIsScrolled ] = useState(false);
+  const [ isAuthOpen, setIsAuthOpen ] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -47,9 +47,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`${styles.header} ${
-          isScrolled ? styles.scrolled : ""
-        }`}
+        className={`${styles.header} ${isScrolled ? styles.scrolled : ""
+          }`}
       >
         <div className={styles.container}>
           {/* Logo */}
@@ -86,13 +85,14 @@ const Header = () => {
 
                 {/* Credits */}
                 <div className={styles.creditPill}>
-                  <img
-                    src={creditIcon}
-                    alt="credits"
-                    className={styles.iconSmall}
-                  />
-                  <span className={styles.creditText}>
-                    {credits || 0} Credits
+                  <img src={creditIcon} alt="credits" className={styles.iconSmall} />
+
+                  <span className={styles.creditNumber}>
+                    {credits || 0}
+                  </span>
+
+                  <span className={styles.creditLabel}>
+                    Credits
                   </span>
                 </div>
 
