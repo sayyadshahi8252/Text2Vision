@@ -1,18 +1,25 @@
+/* SECTION */
 .section {
   padding: 5rem 2rem;
   background-color: #ffffff;
   overflow: hidden;
 }
 
+/* CONTAINER */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 6rem;
+
+  width: 100%;
+  box-sizing: border-box; /* 🔥 prevents overflow */
 }
 
+/* IMAGE GRID */
 .imageGrid {
   position: relative;
   display: flex;
@@ -20,6 +27,7 @@
   justify-content: center;
 }
 
+/* MAIN IMAGE */
 .mainImageWrapper {
   width: 80%;
   z-index: 2;
@@ -32,6 +40,7 @@
   border: 1px solid #f0f0f0;
 }
 
+/* SECOND IMAGE */
 .secondaryImageWrapper {
   position: absolute;
   width: 60%;
@@ -47,6 +56,13 @@
   border: 4px solid #ffffff;
 }
 
+/* CONTENT */
+.content {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* TITLE */
 .title {
   font-size: 2.5rem;
   font-weight: 800;
@@ -62,6 +78,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* TEXT */
 .description {
   font-size: 1.1rem;
   color: #4b5563;
@@ -74,6 +91,15 @@
   color: #6b7280;
   line-height: 1.7;
 }
+
+/* 🔥 BUTTON FIX */
+.content button {
+  max-width: 100%;
+}
+
+/* ===================== */
+/* 📱 TABLET */
+/* ===================== */
 
 @media (max-width: 1024px) {
   .container {
@@ -100,6 +126,10 @@
     font-size: 2.2rem;
   }
 }
+
+/* ===================== */
+/* 📱 MOBILE */
+/* ===================== */
 
 @media (max-width: 768px) {
   .section {
@@ -133,9 +163,28 @@
   }
 }
 
+/* ===================== */
+/* 📱 SMALL MOBILE */
+/* ===================== */
+
 @media (max-width: 480px) {
   .section {
     padding: 3rem 1rem;
+  }
+
+  .container {
+    width: 100%;
+    overflow: hidden; /* 🔥 prevents horizontal scroll */
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  /* 🔥 BUTTON FULL WIDTH */
+  .content button {
+    width: 100%;
+    max-width: 100%;
   }
 
   .mainImageWrapper {

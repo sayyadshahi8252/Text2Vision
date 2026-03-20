@@ -21,6 +21,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
+/* CONTAINER */
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -45,53 +46,38 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem; /* tighter for single line */
 }
 
-/* USER SECTION */
+/* USER SECTION - SINGLE LINE */
 .userSection {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  flex-wrap: wrap; /* 🔥 important for mobile */
+  gap: 0.8rem;
+  flex-wrap: nowrap; /* ❗ force one line */
 }
 
-/* 🔥 CREDIT PILL (IMPROVED FOCUS BUT SAME THEME) */
+/* 🔥 CREDIT (VISIBLE + CLEAN) */
 .creditPill {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.15),
-    rgba(99, 102, 241, 0.25)
-  );
-
-  padding: 0.45rem 1rem;
+  background: rgba(99, 102, 241, 0.12);
+  padding: 0.35rem 0.8rem;
   border-radius: 50px;
-
-  border: 1px solid rgba(99, 102, 241, 0.25);
-
-  /* subtle glow */
-  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.2);
 
   white-space: nowrap;
-  transition: all 0.25s ease;
-}
-
-.creditPill:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.25);
 }
 
 .iconSmall {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 .creditText {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #4f46e5;
 }
@@ -100,23 +86,21 @@
 .userActions {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.5rem;
+}
+
+/* ❌ REMOVE PROFILE + NAME */
+.profileIcon {
+  display: none;
 }
 
 .userName {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #374151;
+  display: none;
 }
 
-.profileIcon {
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
-}
-
+/* LOGOUT */
 .logoutWrapper {
-  padding: 6px;
+  padding: 5px;
   background: #f9fafb;
   border-radius: 50%;
   display: flex;
@@ -131,15 +115,15 @@
 }
 
 .logoutIcon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 /* AUTH */
 .authGroup {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 /* LINKS */
@@ -147,25 +131,36 @@
   text-decoration: none;
   color: #4b5563;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .active {
   color: #6366f1;
 }
+/* REMOVE UNDERLINE FROM ALL LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAV LINKS */
+.link {
+  text-decoration: none;
+}
+
+/* LOGO LINK (important) */
 .logoLink {
   text-decoration: none;
 }
 
-.logoLink:hover {
-  text-decoration: none;
-}
-
+.logoLink:hover,
 .logoLink:focus,
 .logoLink:active,
 .logoLink:visited {
   text-decoration: none;
 }
+
 @media (max-width: 768px) {
   .header {
     padding: 1rem 0;
@@ -173,72 +168,48 @@
 
   .container {
     padding: 0 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    flex-direction: row; /* ❗ keep single line */
   }
 
   .nav {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .userSection {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  /* 🔥 keep credits always visible */
-  .creditPill {
-    order: 1;
-  }
-
-  .userActions {
-    order: 2;
+    gap: 0.7rem;
   }
 
   .brandText {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .userName {
-    display: none;
+    font-size: 1.3rem;
   }
 
-  .creditPill {
-    padding: 0.4rem 0.8rem;
-  }
-
-  .creditText {
+  .link {
     font-size: 0.8rem;
   }
 
-  .profileIcon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .logoutIcon {
-    width: 16px;
-    height: 16px;
+  .creditText {
+    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
-  .brandText {
-    font-size: 1.2rem;
-  }
-
   .container {
-    padding: 0 0.8rem;
+    padding: 0 0.6rem;
   }
 
-  /* ❌ removed display:none (FIXED) */
+  .brandText {
+    font-size: 1.1rem;
+  }
+
+  .nav {
+    gap: 0.4rem;
+  }
+
+  .link {
+    font-size: 0.75rem;
+  }
+
   .creditPill {
-    display: flex;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .creditText {
+    font-size: 0.7rem;
   }
 }
