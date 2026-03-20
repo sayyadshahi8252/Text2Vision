@@ -1,3 +1,4 @@
+/* HEADER BASE */
 .header {
   position: fixed;
   top: 0;
@@ -30,6 +31,7 @@
   width: 100%;
 }
 
+/* BRAND */
 .brandText {
   font-size: 1.6rem;
   font-weight: 800;
@@ -37,30 +39,50 @@
   background: linear-gradient(135deg, #1e1e1e 30%, #6366f1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: transform 0.3s ease;
-  display: inline-block;
 }
 
+/* NAV */
 .nav {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
+/* USER SECTION */
 .userSection {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
+  flex-wrap: wrap; /* 🔥 important for mobile */
 }
 
+/* 🔥 CREDIT PILL (IMPROVED FOCUS BUT SAME THEME) */
 .creditPill {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(99, 102, 241, 0.1);
+
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.15),
+    rgba(99, 102, 241, 0.25)
+  );
+
   padding: 0.45rem 1rem;
   border-radius: 50px;
-  border: 1px solid rgba(99, 102, 241, 0.15);
+
+  border: 1px solid rgba(99, 102, 241, 0.25);
+
+  /* subtle glow */
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
+
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.creditPill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.25);
 }
 
 .iconSmall {
@@ -74,6 +96,7 @@
   color: #4f46e5;
 }
 
+/* USER ACTIONS */
 .userActions {
   display: flex;
   align-items: center;
@@ -112,12 +135,14 @@
   height: 18px;
 }
 
+/* AUTH */
 .authGroup {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
+/* LINKS */
 .link {
   text-decoration: none;
   color: #4b5563;
@@ -128,25 +153,19 @@
 .active {
   color: #6366f1;
 }
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 1.5rem;
-  }
-
-  .nav {
-    gap: 1.5rem;
-  }
-
-  .userSection {
-    gap: 1rem;
-  }
-
-  .authGroup {
-    gap: 1rem;
-  }
+.logoLink {
+  text-decoration: none;
 }
 
+.logoLink:hover {
+  text-decoration: none;
+}
+
+.logoLink:focus,
+.logoLink:active,
+.logoLink:visited {
+  text-decoration: none;
+}
 @media (max-width: 768px) {
   .header {
     padding: 1rem 0;
@@ -154,18 +173,30 @@
 
   .container {
     padding: 0 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .nav {
-    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
+  .userSection {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* 🔥 keep credits always visible */
   .creditPill {
-    padding: 0.4rem 0.8rem;
+    order: 1;
   }
 
-  .creditText {
-    font-size: 0.8rem;
+  .userActions {
+    order: 2;
   }
 
   .brandText {
@@ -178,16 +209,12 @@
     display: none;
   }
 
-  .nav {
-    gap: 0.7rem;
-  }
-
-  .authGroup {
-    gap: 0.7rem;
-  }
-
   .creditPill {
-    padding: 0.35rem 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .creditText {
+    font-size: 0.8rem;
   }
 
   .profileIcon {
@@ -210,11 +237,8 @@
     padding: 0 0.8rem;
   }
 
-  .nav {
-    gap: 0.5rem;
-  }
-
+  /* ❌ removed display:none (FIXED) */
   .creditPill {
-    display: none;
+    display: flex;
   }
 }
