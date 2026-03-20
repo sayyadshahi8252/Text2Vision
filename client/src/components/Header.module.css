@@ -164,7 +164,7 @@
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .nav {
@@ -208,12 +208,9 @@
   }
 }
 
-/* ========================= */
-/* SMALL MOBILE (FINAL FIX 🔥) */
-/* ========================= */
 @media (max-width: 480px) {
   .container {
-    padding: 0 0.8rem;
+    padding: 0 0.4rem;
   }
 
   .brandText {
@@ -228,14 +225,14 @@
     display: none;
   }
 
-  /* 🔥 CREDIT FIX */
+ 
   .creditPill {
     padding: 0.3rem 0.55rem;
     gap: 0.25rem;
   }
 
   .creditLabel {
-    display: none; /* ❌ hide "Credits" */
+    display: none; 
   }
 
   .creditNumber {
